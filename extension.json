@@ -1,0 +1,38 @@
+{
+	"identifier": "name.tobiastom.psalm",
+	"name": "Psalm",
+	"organization": "Tobias Tom",
+	"description": "Language Server for Psalm",
+	"version": "1.0",
+	"categories": ["languages"],
+	"bugs": "https://github.com/tobiastom/Psalm.novaextension/issues",
+	"repository": "https://github.com/tobiastom/Psalm.novaextension",
+
+	"main": "main.js",
+
+	"entitlements": {
+		"process": true,
+		"filesystem": "readonly"
+	},
+
+	"activationEvents": [
+		"onLanguage:php",
+		"onLanguage:phtml",
+		"onLanguage:advphp"
+	],
+
+	"config": [
+		{
+			"key": "name.tobiastom.psalm.path",
+			"title": "Path to psalm-language-server",
+			"type": "path",
+			"placeholder": "./vendor/bin/psalm-language-server"
+		},
+		{
+			"key": "name.tobiastom.psalm.config",
+			"title": "Configuration file",
+			"type": "path",
+			"placeholder": "./psalm.xml"
+		}
+	]
+}
